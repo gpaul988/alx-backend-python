@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 '''Graham S. Paul - 4-define_variables.py
-Define and annotate the variables 
-a, pi, i_understand_annotations, school.
 '''
 
 
