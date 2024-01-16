@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Retrieves an asyncio.Task"""
+"""returns an asyncio.Task"""
 
 import asyncio
 
