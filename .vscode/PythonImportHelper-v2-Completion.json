@@ -1787,7 +1787,7 @@
         "kind": 5,
         "importPath": "0x02-python_async_comprehension.1-async_comprehension",
         "description": "0x02-python_async_comprehension.1-async_comprehension",
-        "peekOfCode": "async_generator = using('0-async_generator').async_generator\nasync def async_comprehension() -> List[float]:\n    '''Creates a list of 10 numbers from a 10-number generator.\n    '''\n    return [num async for num in async_generator()]",
+        "peekOfCode": "async_generator = using('0-async_generator').async_generator\nasync def async_comprehension() -> List[float]:\n    '''Develope a series of 10 digits from a 10-number generator.\n    '''\n    return [num async for num in async_generator()]",
         "detail": "0x02-python_async_comprehension.1-async_comprehension",
         "documentation": {}
     },
