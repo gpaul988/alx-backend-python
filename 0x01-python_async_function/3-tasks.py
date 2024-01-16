@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Graham S. Paul - 3-tasks.py"""
+"""Graham S. Paul - 3.tasks.py"""
 
 import asyncio
 
@@ -8,13 +8,13 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 
 
 def task_wait_random(max_delay: int) -> asyncio.Task:
-    """[Synopsis]
+    """[synopsis]
 
     Args:
-        max_delay (int): 
+        max_delay (int): [explanation]
 
     Returns:
-        asyncio.Task: 
+        asyncio.Task: [explanation]
     """
     return asyncio.create_task(wait_random(max_delay))
 
