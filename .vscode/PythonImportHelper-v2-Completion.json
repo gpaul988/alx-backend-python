@@ -1796,7 +1796,7 @@
         "kind": 5,
         "importPath": "0x02-python_async_comprehension.2-measure_runtime",
         "description": "0x02-python_async_comprehension.2-measure_runtime",
-        "peekOfCode": "async_comprehension = using('1-async_comprehension').async_comprehension\nasync def measure_runtime() -> float:\n    '''Executes async_comprehension 4 times and measures the\n    total execution time.\n    '''\n    start_time = time.time()\n    await asyncio.gather(*(async_comprehension() for _ in range(4)))\n    return time.time() - start_time",
+        "peekOfCode": "async_comprehension = using('1-async_comprehension').async_comprehension\nasync def measure_runtime() -> float:\n    '''Boot async_comprehension 4 times and measures the\n    total booting time.\n    '''\n    start_time = time.time()\n    await asyncio.gather(*(async_comprehension() for _ in range(4)))\n    return time.time() - start_time",
         "detail": "0x02-python_async_comprehension.2-measure_runtime",
         "documentation": {}
     }
