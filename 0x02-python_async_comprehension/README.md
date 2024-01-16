@@ -2,8 +2,10 @@
 
 This project contains tasks for learning to use asynchronous comprehensions in Python 3.
 
-## Author:
-+ [x] Graham S. Paul 
+## Author
+
++ [x] Graham S. Paul
+
 ## Tasks To Complete
 
 + [x] 0. **Async Generator**<br/>[0-async_generator.py](0-async_generator.py) contains an asynchronous coroutine called `async_generator` that takes no arguments and meets the following requirements:
