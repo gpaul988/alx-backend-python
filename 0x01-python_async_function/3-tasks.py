@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""Retrieves an asyncio.Tas
-Graham S. PAul 3-tasks.py"""
+"""Retrieves an asyncio.Tas"""
 
 import asyncio
 
