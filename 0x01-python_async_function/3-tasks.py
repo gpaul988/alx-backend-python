@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Graham S. Paul - 3-tasks.py
-Returns an asyncio. task"""
+"""Graham S. Paul - Returns an asyncio. task"""
+
 import asyncio
 
 
