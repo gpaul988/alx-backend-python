@@ -1701,7 +1701,7 @@
         "kind": 5,
         "importPath": "0x01-python_async_function.1-concurrent_coroutines",
         "description": "0x01-python_async_function.1-concurrent_coroutines",
-        "peekOfCode": "wait_random = __import__('0-basic_async_syntax').wait_random\nasync def wait_n(n: int = 0, max_delay: int = 10) -> List[float]:\n    \"\"\"list: [description] - list of all the delays (float values)\"\"\"\n    tasks = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]\n    return [await task for task in asyncio.as_completed(tasks)]",
+        "peekOfCode": "wait_random = __import__('0-basic_async_syntax').wait_random\nasync def wait_n(n: int = 0, max_delay: int = 10) -> List[float]:\n    \"\"\"Detail: [description] - list of all the delays (float values)\"\"\"\n    tasks = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]\n    return [await task for task in asyncio.as_completed(tasks)]",
         "detail": "0x01-python_async_function.1-concurrent_coroutines",
         "documentation": {}
     },
@@ -1710,7 +1710,7 @@
         "kind": 2,
         "importPath": "0x01-python_async_function.2-measure_runtime",
         "description": "0x01-python_async_function.2-measure_runtime",
-        "peekOfCode": "def measure_time(n: int = 0, max_delay: int = 10) -> float:\n    \"\"\"[summary]\n    Args:\n        n (int, optional): [description]. Defaults to 0.\n        max_delay (int, optional): [description]. Defaults to 10.\n    Returns:\n        float: [description] - total_time / n\n    \"\"\"\n    start_time = time.time()\n    asyncio.run(wait_n(n, max_delay))",
+        "peekOfCode": "def measure_time(n: int = 0, max_delay: int = 10) -> float:\n    \"\"\"[synopsis]\n    Args:\n        n (int, optional): [explanation]. Defaults to 0.\n        max_delay (int, optional): [description]. Defaults to 10.\n    Returns:\n        float: [explanation] - total_time / n\n    \"\"\"\n    start_time = time.time()\n    asyncio.run(wait_n(n, max_delay))",
         "detail": "0x01-python_async_function.2-measure_runtime",
         "documentation": {}
     },
@@ -1719,7 +1719,7 @@
         "kind": 5,
         "importPath": "0x01-python_async_function.2-measure_runtime",
         "description": "0x01-python_async_function.2-measure_runtime",
-        "peekOfCode": "wait_n = __import__('1-concurrent_coroutines').wait_n\ndef measure_time(n: int = 0, max_delay: int = 10) -> float:\n    \"\"\"[summary]\n    Args:\n        n (int, optional): [description]. Defaults to 0.\n        max_delay (int, optional): [description]. Defaults to 10.\n    Returns:\n        float: [description] - total_time / n\n    \"\"\"\n    start_time = time.time()",
+        "peekOfCode": "wait_n = __import__('1-concurrent_coroutines').wait_n\ndef measure_time(n: int = 0, max_delay: int = 10) -> float:\n    \"\"\"[synopsis]\n    Args:\n        n (int, optional): [explanation]. Defaults to 0.\n        max_delay (int, optional): [description]. Defaults to 10.\n    Returns:\n        float: [explanation] - total_time / n\n    \"\"\"\n    start_time = time.time()",
         "detail": "0x01-python_async_function.2-measure_runtime",
         "documentation": {}
     },
@@ -1728,7 +1728,7 @@
         "kind": 2,
         "importPath": "0x01-python_async_function.3-tasks",
         "description": "0x01-python_async_function.3-tasks",
-        "peekOfCode": "def task_wait_random(max_delay: int) -> asyncio.Task:\n    \"\"\"[summary]\n    Args:\n        max_delay (int): [description]\n    Returns:\n        asyncio.Task: [description]\n    \"\"\"\n    return asyncio.create_task(wait_random(max_delay))\nif __name__ == \"__main__\":\n    async def test(max_delay: int) -> float:",
+        "peekOfCode": "def task_wait_random(max_delay: int) -> asyncio.Task:\n    \"\"\"[Synopsis]\n    Args:\n        max_delay (int): \n    Returns:\n        asyncio.Task: \n    \"\"\"\n    return asyncio.create_task(wait_random(max_delay))\nif __name__ == \"__main__\":\n    async def test(max_delay: int) -> float:",
         "detail": "0x01-python_async_function.3-tasks",
         "documentation": {}
     },
@@ -1737,7 +1737,7 @@
         "kind": 5,
         "importPath": "0x01-python_async_function.3-tasks",
         "description": "0x01-python_async_function.3-tasks",
-        "peekOfCode": "wait_random = __import__('0-basic_async_syntax').wait_random\ndef task_wait_random(max_delay: int) -> asyncio.Task:\n    \"\"\"[summary]\n    Args:\n        max_delay (int): [description]\n    Returns:\n        asyncio.Task: [description]\n    \"\"\"\n    return asyncio.create_task(wait_random(max_delay))\nif __name__ == \"__main__\":",
+        "peekOfCode": "wait_random = __import__('0-basic_async_syntax').wait_random\ndef task_wait_random(max_delay: int) -> asyncio.Task:\n    \"\"\"[Synopsis]\n    Args:\n        max_delay (int): \n    Returns:\n        asyncio.Task: \n    \"\"\"\n    return asyncio.create_task(wait_random(max_delay))\nif __name__ == \"__main__\":",
         "detail": "0x01-python_async_function.3-tasks",
         "documentation": {}
     },
@@ -1746,7 +1746,7 @@
         "kind": 5,
         "importPath": "0x01-python_async_function.4-tasks",
         "description": "0x01-python_async_function.4-tasks",
-        "peekOfCode": "task_wait_random = __import__('3-tasks').task_wait_random\nasync def task_wait_n(n: int, max_delay: int) -> List[float]:\n    \"\"\"[summary]\n    Args:\n        n (int): [description]\n        max_delay (int): [description]\n    Returns:\n        list: [description]\n    \"\"\"\n    tasks = [task_wait_random(max_delay) for _ in range(n)]",
+        "peekOfCode": "task_wait_random = __import__('3-tasks').task_wait_random\nasync def task_wait_n(n: int, max_delay: int) -> List[float]:\n    \"\"\"[Synopsis]\n    Args:\n        n (int): \n        max_delay (int): \n    Returns:\n        list: \n    \"\"\"\n    tasks = [task_wait_random(max_delay) for _ in range(n)]",
         "detail": "0x01-python_async_function.4-tasks",
         "documentation": {}
     }
