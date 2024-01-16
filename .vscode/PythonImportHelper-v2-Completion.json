@@ -483,6 +483,22 @@
         "documentation": {}
     },
     {
+        "label": "Generator",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "collections",
         "kind": 6,
         "isExtraImport": true,
@@ -524,6 +540,22 @@
         "importPath": "time",
         "description": "time",
         "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "import_module",
+        "importPath": "importlib",
+        "description": "importlib",
+        "isExtraImport": true,
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "import_module",
+        "importPath": "importlib",
+        "description": "importlib",
+        "isExtraImport": true,
+        "detail": "importlib",
         "documentation": {}
     },
     {
@@ -1728,7 +1760,7 @@
         "kind": 2,
         "importPath": "0x01-python_async_function.3-tasks",
         "description": "0x01-python_async_function.3-tasks",
-        "peekOfCode": "def task_wait_random(max_delay: int) -> asyncio.Task:\n    \"\"\"[Synopsis]\n    Args:\n        max_delay (int): \n    Returns:\n        asyncio.Task: \n    \"\"\"\n    return asyncio.create_task(wait_random(max_delay))\nif __name__ == \"__main__\":\n    async def test(max_delay: int) -> float:",
+        "peekOfCode": "def task_wait_random(max_delay: int) -> asyncio.Task:\n    \"\"\"[synopsis]\n    Args:\n        max_delay (int): [explanation]\n    Returns:\n        asyncio.Task: [explanation]\n    \"\"\"\n    return asyncio.create_task(wait_random(max_delay))\nif __name__ == \"__main__\":\n    async def test(max_delay: int) -> float:",
         "detail": "0x01-python_async_function.3-tasks",
         "documentation": {}
     },
@@ -1737,7 +1769,7 @@
         "kind": 5,
         "importPath": "0x01-python_async_function.3-tasks",
         "description": "0x01-python_async_function.3-tasks",
-        "peekOfCode": "wait_random = __import__('0-basic_async_syntax').wait_random\ndef task_wait_random(max_delay: int) -> asyncio.Task:\n    \"\"\"[Synopsis]\n    Args:\n        max_delay (int): \n    Returns:\n        asyncio.Task: \n    \"\"\"\n    return asyncio.create_task(wait_random(max_delay))\nif __name__ == \"__main__\":",
+        "peekOfCode": "wait_random = __import__('0-basic_async_syntax').wait_random\ndef task_wait_random(max_delay: int) -> asyncio.Task:\n    \"\"\"[synopsis]\n    Args:\n        max_delay (int): [explanation]\n    Returns:\n        asyncio.Task: [explanation]\n    \"\"\"\n    return asyncio.create_task(wait_random(max_delay))\nif __name__ == \"__main__\":",
         "detail": "0x01-python_async_function.3-tasks",
         "documentation": {}
     },
@@ -1746,8 +1778,26 @@
         "kind": 5,
         "importPath": "0x01-python_async_function.4-tasks",
         "description": "0x01-python_async_function.4-tasks",
-        "peekOfCode": "task_wait_random = __import__('3-tasks').task_wait_random\nasync def task_wait_n(n: int, max_delay: int) -> List[float]:\n    \"\"\"[Synopsis]\n    Args:\n        n (int): \n        max_delay (int): \n    Returns:\n        list: \n    \"\"\"\n    tasks = [task_wait_random(max_delay) for _ in range(n)]",
+        "peekOfCode": "task_wait_random = __import__('3-tasks').task_wait_random\nasync def task_wait_n(n: int, max_delay: int) -> List[float]:\n    \"\"\"[Synopsis]\n    Args:\n        n (int): [explanation]\n        max_delay (int): [explanation]\n    Returns:\n        list: [explanation]\n    \"\"\"\n    tasks = [task_wait_random(max_delay) for _ in range(n)]",
         "detail": "0x01-python_async_function.4-tasks",
+        "documentation": {}
+    },
+    {
+        "label": "async_generator",
+        "kind": 5,
+        "importPath": "0x02-python_async_comprehension.1-async_comprehension",
+        "description": "0x02-python_async_comprehension.1-async_comprehension",
+        "peekOfCode": "async_generator = using('0-async_generator').async_generator\nasync def async_comprehension() -> List[float]:\n    '''Creates a list of 10 numbers from a 10-number generator.\n    '''\n    return [num async for num in async_generator()]",
+        "detail": "0x02-python_async_comprehension.1-async_comprehension",
+        "documentation": {}
+    },
+    {
+        "label": "async_comprehension",
+        "kind": 5,
+        "importPath": "0x02-python_async_comprehension.2-measure_runtime",
+        "description": "0x02-python_async_comprehension.2-measure_runtime",
+        "peekOfCode": "async_comprehension = using('1-async_comprehension').async_comprehension\nasync def measure_runtime() -> float:\n    '''Executes async_comprehension 4 times and measures the\n    total execution time.\n    '''\n    start_time = time.time()\n    await asyncio.gather(*(async_comprehension() for _ in range(4)))\n    return time.time() - start_time",
+        "detail": "0x02-python_async_comprehension.2-measure_runtime",
         "documentation": {}
     }
 ]
