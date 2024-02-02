@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Graham S. Paul - test_utils.py
-""" Parameterized unittest. """
+""" unittest parameterized module"""
 import unittest
 from utils import access_nested_map, get_json, memoize
 from parameterized import parameterized
@@ -8,7 +8,7 @@ from unittest.mock import Mock, patch
 
 
 class TestAccessNestedMap(unittest.TestCase):
-    """ Class for testing Nested Map function """
+    """ Group for testing Nested Map function """
     # unittest does not support test decorators,
     # only tests created with @parameterized.expand will be executed
     @parameterized.expand([
@@ -17,7 +17,7 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": {"b": 2}}, ("a", "b"), 2)
     ])
     def test_access_nested_map(self, map, path, expected_output):
-        """ Test method returns correct output """
+        """The test procedure always comeback with the correct output """
         real_output = access_nested_map(map, path)
         self.assertEqual(real_output, expected_output)
 
@@ -26,21 +26,21 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": 1}, ("a", "b"), 'b')
     ])
     def test_access_nested_map_exception(self, map, path, wrong_output):
-        """ Test method raises correct exception """
+        """ The test Technique Increases the correct exception """
         with self.assertRaises(KeyError) as e:
             access_nested_map(map, path)
             self.assertEqual(wrong_output, e.exception)
 
 
 class TestGetJson(unittest.TestCase):
-    """ Class for testing get_json function """
+    """ Group for testing get_json function """
     # order of args: test_url, test_payload
     @parameterized.expand([
         ("http://example.com", {"payload": True}),
         ("http://holberton.io", {"payload": False})
     ])
     def test_get_json(self, test_url, test_payload):
-        """ Test method returns correct output """
+        """The test procedures always comes back with the correct output """
         # create Mock object with json method that returns test_payload
         mock_response = Mock()
         mock_response.json.return_value = test_payload
@@ -53,16 +53,16 @@ class TestGetJson(unittest.TestCase):
 
 
 class TestMemoize(unittest.TestCase):
-    """ Class for testing memoization """
+    """ Group for testing memoization """
 
     def test_memoize(self):
         """ Tests memoize function """
 
         class TestClass:
-            """ Test class """
+            """ Test Group """
 
             def a_method(self):
-                """ Method to always return 42 """
+                """ Technique to always return 42 """
                 return 42
 
             @memoize
